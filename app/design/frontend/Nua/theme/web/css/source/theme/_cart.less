@@ -1,0 +1,243 @@
+.minicart-items {
+    .icon {
+        &-minus {
+            border: 1px solid @black-color;
+        }
+        &-plus {
+            border: 1px solid @black-color;
+        }
+    }
+    .action {
+        &.delete {
+            padding-top: 3px;
+            padding-bottom: 3px;
+            &:before {
+                content: "\f014";
+                font: normal normal normal 14px/1 FontAwesome;
+            }
+        }
+    }
+
+    .product-item-details {
+        >.product.options {
+            font-family: @font-gotham-book;
+        }
+        .price {
+            font-family: @font-gotham-book;
+        }
+        .details-qty {
+            font-family: @font-gotham-book;
+        }
+    }
+}
+.cart-summary {
+    .summary {
+        &.title {
+            font-weight: @font-weight-400;
+        }
+    }
+    .gift-card-apply {
+        #discount-giftcard-form {
+            .fieldset.coupon {
+                .action.primary {
+                    background-color: @black-color;
+                    height: auto;
+                    line-height: initial;
+                    &:hover {
+                        &:after { 
+                            background-color: @gold-color;
+                        }
+                    }
+                }
+            }
+            .action.secondary {
+                background-color: @black-color;
+                margin-bottom: 10px;
+                &:hover {
+                    &:after { 
+                        background-color: @gold-color;
+                    }
+                }
+            }
+        }
+    }
+    #discount-coupon-form {
+        .fieldset.coupon {
+            .action.primary {
+                background-color: @black-color;
+                height: auto;
+                &:hover {
+                    &:after { 
+                        background-color: @gold-color;
+                    }
+                }
+            }
+        }
+    }
+    .block {
+        .fieldset {
+            font-family: @font-gotham-book;
+        }
+    }
+    #block-discount-heading {
+        font-family: @font-knockout;
+    }
+}
+.column {
+    &.main { 
+            .cart {
+                &-container {
+                    .cart {
+                        &.main {
+                            &.actions {
+                                .action {
+                                    &.update {
+                                        background-color: @black-color;
+                                        &:hover {
+                                            &:after { 
+                                                background-color: @gold-color;
+                                            }
+                                        }
+                                    }
+                                    &.continue {
+                                        background-color: transparent;
+                                        color: @black-color;
+                                        border: 2px solid @black-color;
+                                        &:hover {
+                                            color: @white-color;
+                                        }
+                                    }
+                                } 
+                            }
+                        }
+                    }
+                    .checkout-methods-items {
+                        .action {
+                            &.multicheckout {
+                                font-size: 1.8rem; 
+                            }
+                        }
+                    }
+                }
+                &-summary { 
+                #block-discount {
+                    float: none;
+                    margin-left: 0;
+                }
+                .block {
+                        .title {
+                            strong {
+                            font-weight: @font-weight-400;
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+                .table-wrapper {
+                    table.totals {
+                        .totals {
+                            .amount{
+                                strong{
+                                    span{
+                                        font-size: 32px;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                            &.sub {
+                                th {
+                                    font-size: 1.6rem;
+                                }
+                            }
+                            &.shipping {
+                                th {
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+
+.gift-card-apply {
+    button.action.secondary {
+        span {
+            font-size: 24px;
+        }
+    }
+}
+
+.checkout-cart-index{
+    .block.additional-products.at-carousel.crosssell.owl-dots--align-left.owl-nav--position-hover.title--align-.owl-dots--show {
+        width: 70%;
+    }
+}
+
+.message.success {
+    font-family: @font-gotham-book;
+}
+
+.block-minicart {
+    .items-total {
+        span {
+            font-family: @font-gotham-book;
+        }
+    }
+}
+
+.cart.table-wrapper {
+    .items {
+        thead {
+            font-family: @font-gotham-book;
+        }
+    }
+}
+.col.subtotal {
+    font-family: @font-gotham-book;
+}
+.col.price {
+    font-family: @font-gotham-book;
+}
+.col.subtotal {
+    font-family: @font-gotham-book;
+}
+
+.minicart--style-modern {
+    .block-minicart {
+        .subtotal {
+            font-family: @font-gotham-book;
+        }
+    }
+}
+
+.cart.table-wrapper {
+    .item-options {
+        font-family: @font-gotham-book;
+    }
+}
+
+.checkout-cart-index {
+    select {
+        font-family: @font-gotham-book;
+    }
+    input {
+        font-family: @font-gotham-book;
+    }
+    label {
+        font-family: @font-gotham-book;
+    }
+
+}
+
+.cart-totals {
+    .table-wrapper {
+        font-family: @font-gotham-book;
+    }
+}
+
+.messages {
+    font-family: @font-gotham-book;
+}

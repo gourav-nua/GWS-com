@@ -1,0 +1,53 @@
+.login-container {
+    .block-customer-login {
+        .actions-toolbar {
+            .secondary {
+                .action {
+                    &::after {
+                        background-color:transparent;
+                    }
+                    &:hover {
+                        color: @gold-color;
+                        &::after {
+                            background-color:transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .block {
+        .secondary {
+            >a.action {
+                font-family: @font-gotham-book;
+            }
+        }
+    }
+    input {
+        font-family: @font-gotham-book;
+    }
+    label {
+        font-family: @font-gotham-book;
+    }
+    .field-error{
+        font-family: @font-gotham-book;
+    }
+}
+.form {
+    &.password {
+        &.forget {
+            .actions-toolbar {
+                .secondary {
+                    .action {
+                        &:hover {
+                            color: @gold-color;
+                            &::after {
+                                background-color:@white-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
