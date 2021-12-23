@@ -484,6 +484,7 @@ return array(
     '2451819c9c2b818eb9be5f36b51585ea' => $vendorDir . '/magento/module-wishlist-graph-ql/registration.php',
     'd04d5084d3db908d3544ed506541866a' => $vendorDir . '/magento/theme-adminhtml-backend/registration.php',
     '7102f9cf0d2c08bc731a7e185c1c8bfc' => $vendorDir . '/magento/theme-frontend-luma/registration.php',
+    'b5843d9aa73dbbe9d709b76cbd3ff36f' => $vendorDir . '/magepal/magento2-core/registration.php',
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     '3109cb1a231dcd04bee1f9f620d46975' => $vendorDir . '/paragonie/sodium_compat/autoload.php',
     'aa75ea0761a2f40c1f3b32ad314f86c4' => $vendorDir . '/phpseclib/mcrypt_compat/lib/mcrypt.php',
@@ -492,5 +493,7 @@ return array(
     '0675d4e4a5ec2bff513f44d595f3b063' => $vendorDir . '/magento/data-migration-tool/src/Migration/cli_commands.php',
     'a1a5ee93938163d4806d2cc4f289e75c' => $vendorDir . '/magento/data-migration-tool/registration.php',
     'eda65932675b68b5aee4503e0762d64d' => $vendorDir . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
+    '0ba5079bc0aa31645404935d16e5e118' => $vendorDir . '/magepal/magento2-gmailsmtpapp/registration.php',
+    '6b5b87bda6fedcf6ef8605219c8b67f2' => $vendorDir . '/mageplaza/module-core/registration.php',
     'b4cf39431a4b949eea8aa69ebb3d39da' => $baseDir . '/app/etc/NonComposerComponentRegistration.php',
 );

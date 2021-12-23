@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.details">                
+            <referenceBlock name="product.info.description">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Product Description</argument>
+                </arguments>
+            </referenceBlock>
+        </referenceBlock>
+        <referenceContainer name="content">
+          <container name="product.custom.description" label="Product Custom description" htmlTag="div" htmlClass="product-custom-description" after="product.info.details">
+              <block class="Magento\Catalog\Block\Product\View" name="extra" template="Magento_Catalog::product/view/customDescription.phtml" />
+          </container>        
+        </referenceContainer>
+        <referenceBlock name="product.info.options.wrapper.bottom">
+            <block class="Magento\Catalog\Block\Product\View" name="size-guide" template="Magento_Catalog::product/view/sizeGuide.phtml" before="-" />    
+        </referenceBlock>
+        <move element="size-guide" destination="product.info.main" after="product.info.overview"/>
+        <move element="product.info.stock.sku" destination="product.info.price" before="product.price.final"/>
+    </body>
+</page>

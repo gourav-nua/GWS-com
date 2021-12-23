@@ -1,10 +1,5 @@
 //1600
 @media only screen and (max-width: (@screen__1600)) { 
-    .clothing-accessories{
-        .ox-menu-col{
-            flex-grow: 0.8;
-        }
-    } 
     .home-page-banner{
         .main-banner-.section{
             .banner-title{
@@ -13,6 +8,30 @@
             }
             &:after{
                 top: 14%;
+            }
+        }
+    }
+    .menu-style-2 {
+        .page-header {
+            .ox-megamenu > ul > .level0 > .level-top,
+            .navigation > ul > .level0 > .level-top {
+                padding: 6px 9px;
+                font-size: 18px;
+            }
+        }
+    }
+    .category-guinness-at-home {
+        .block-title {
+            &.title-h3 {
+                h3 {
+                    font-size: 38px; 
+                }
+                &:after {
+                    width: 100px;
+                }
+                &:before {
+                    width: 100px;
+                }
             }
         }
     }
@@ -76,7 +95,49 @@
 }
 
 //1366
-@media only screen and (max-width: (@screen__1366)) { 
+@media only screen and (max-width: (@screen__1366)) {
+    .menu-style-2 {
+        .page-header {
+            .ox-megamenu {
+                > ul {
+                    > .level0 {
+                        > .level-top {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .category-guinness-at-home {
+        .block-title {
+            &.title-h3 {
+                h3 {
+                    font-size: 36px;
+                }
+                &:after {
+                    display: none;
+                }
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }  
+    .ox-megamenu--opened {
+        .ox-megamenu__dropdown {
+            &.opened {
+                top: auto;
+            }
+        }
+    }
+    .main_contant {
+        .converter_contant {
+            p {
+                max-width: 860px;
+            }
+        }
+    }
     .home-page-banner{
         .main-banner-.section{
             .banner-title{
@@ -110,22 +171,48 @@
             padding: 25px 5px;
         }
     } 
-    .centered-iblocks.-stretch{
+    .centered-iblocks.-stretch{ 
         > div{
             padding: 25px 5px;
         }
     } 
+    .product-guinnessr-gravity {
+        #bgvideo {
+            height: 650px;
+        }
+    }
+    .contact-index-index {
+        .contacts-layout-split {
+            .contacts-form-block {
+                padding-left:30px;
+                padding-right: 30px;
+            }
+        }
+    }
 }
 
 //1024
 @media only screen and (max-width: 1024px) { 
-    .categorypath-guinness-at-home{
-        .block-title.title-h3{
-            &:before{
-                display:none;
+    .main_contant {
+        .converter_contant {
+            h2 {
+                font-size: 54px;
             }
-            &:after{
-                display:none;
+            P {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+    }
+    .categorypath-guinness-at-home{
+        .block-title {
+            &.title-h3 {
+                &:after {
+                    display: none;
+                }
+                &:before {
+                    display: none;
+                }
             }
         }
         .homebar-categories{
@@ -137,12 +224,61 @@
             a{
                margin-bottom: 20px;
             }
-        }  
+        } 
     } 
+    .category-guinness-at-home {
+        .coustrant_condistrt {
+            .block-align-vertical {
+                .block.widget  {
+                    margin-bottom: 100px;
+                }
+            }
+        }
+        .homebar-categories {
+            a {
+                font-size: 28px;
+            }
+        }
+        .homebar-category-details{
+            a{
+                font-size: 28px;
+            }
+        } 
+    }
+    .column.main {
+        .block-align-vertical {
+            .block:last-child {
+                margin-bottom: 100px;
+            }
+        }
+    }
+    .toolbar-products {
+        .flex-left {
+            margin-left: 0;
+            margin-right: auto;
+        }
+     }
+    .ox-slideout {
+        .ox-nav-sections-items {
+            .switcher {
+                .switcher-options {
+                    .currency-code-name {
+                        font-size: 16px !important;
+                        display: inline-block !important;
+                        vertical-align: middle;
+                        background-color: transparent !important; 
+                        color: @black-color !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                    }
+                }
+            }
+        }
+    }
     .catalog-category-view{
         .column.main{
             .breadcrumbs {
-                padding: 20px;
+                padding: 20px 0;
                 padding-top: 25px;
             }
         }
@@ -215,8 +351,33 @@
     .page-header{
         .logo__container{
             margin: 10px auto 0 0;
+            order: 1;
+            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            max-height: 60px;
+            height: 60px;
+            overflow: hidden;
+            padding: 0;
         }
-    }   
+    }  
+    .mobile-header--layout-2 {
+        .header__content {
+            .flex-left  {
+                order: 0;
+            }
+            .flex-right {
+                order: 2;
+            }
+        }
+        .page-header {
+            .header__content {
+                min-height: auto;
+                padding: 15px 0;
+            }
+        }
+    }
     .container.a-center.same_rtifgt{
         .ox-banner-link{
             margin-bottom: 15px;
@@ -236,6 +397,11 @@
             }
         }
     } 
+    .sticky-wrapper {
+        .switcher-in-header {
+            display: none;
+        }
+    }
     .ox-megamenu-navigation {  
         .home-bar {
             .ox-megamenu-block {
@@ -246,6 +412,7 @@
         }
         .ox-megamenu__dropdown {
             background-color: @white-color; 
+            border-bottom: 1px solid @grey-color;
         }
         .category-item {
             &.has-active {
@@ -296,17 +463,61 @@
                 }
             }
         }
-    }    
+    } 
+    #switcher-currency{
+        &.switcher { 
+            margin-left: 0;
+        }
+    }   
+    .product-addto-links{
+        .action.tocompare {
+            display: inline-block;
+        }
+    }
+    .main_title {
+        h2 {
+            font-size: 28px;
+        }
+    }
 }
 
 //991
 @media only screen and (max-width: (@screen__991)) { 
+    .page-main {
+        h2 {
+            font-size: 50px;
+        }
+        h3 {
+            font-size: 38px;
+        }
+        h4 {
+            font-size: 26px;
+        }
+        h5 {
+            font-size: 20px;
+        }
+    }
+    .category-landing-title {
+        margin-bottom: 20px; 
+    }
+    .product.media {
+        margin-bottom: 15px;
+    } 
     .coverterwe{
         display: none;
         .slime_rotion{
             margin-right: 0;
             margin-bottom: 16px;
+        } 
+    }
+    .guinness-your-bar-content {
+        h3 {
+            font-size: 38px;
+            margin-bottom: 20px;
         }
+    }
+    .review-form {
+        max-width: 100%;
     }
     .actions-toolbar {
         margin-top: 20px;
@@ -319,7 +530,15 @@
             }
         }
     } 
-    .category-image, .category-description {
+    .column.main {
+        .block-align-vertical {
+            .block:last-child {
+                margin-bottom: 60px;
+            }
+        }
+    }
+    .category-image, 
+    .category-description {
         margin-bottom: 0;
     }
      .owl-carousel.widget-product-grid{
@@ -400,7 +619,10 @@
             }
         }
     }
-    .owl-nav button.owl-next:hover span:before, .owl-nav button.owl-prev:hover span:before, .owl-nav button.owl-next:hover span:after, .owl-nav button.owl-prev:hover span:after {
+    .owl-nav button.owl-next:hover span:before, 
+    .owl-nav button.owl-prev:hover span:before, 
+    .owl-nav button.owl-next:hover span:after, 
+    .owl-nav button.owl-prev:hover span:after {
         background: @white-color;
     } 
     .ox-dropdown--megamenu{
@@ -429,22 +651,6 @@
              }
         } 
     }
-    .product-guinnessr-gravity{
-        main#maincontent{
-            .product-custom-description{
-                .product-video-section{
-                    #bgvideo{
-                        height: 435px;
-                    }
-                    .product-video-text{
-                        h2{
-                            font-size: 48px;
-                        }
-                    }
-                }
-            }
-        }
-    } 
     .product-guinnessr-images{
         .col-custom {
             margin: 15px;
@@ -456,14 +662,7 @@
                 padding: 0 15px;
             }
         }
-    }
-    .product-guinnessr-gravity{
-        main#maincontent{
-            .product-info-main{
-                margin-bottom: 0;
-            }
-        }
-    }  
+    } 
     .product-info-main{
         .page-title-wrapper{
             .page-title{
@@ -471,48 +670,60 @@
             }
         }
     } 
-        .category-official-guinness-glassware {
-            .col-12.col-sm-4.a-center {
-                flex: 0 0 100%;
-                max-width: 100%;
-                width: 100%;
-                display: block;
-                .glassware-category-img{
-                    img{
-                        width: 100%;
-                    }
+    .category-official-guinness-glassware {
+        .col-12.col-sm-4.a-center {
+            flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+            display: block;
+            .glassware-category-img{
+                img{
+                    width: 100%;
                 }
             }
         }
-        .categorypath-guinness-at-home{
-            .col-12.col-sm-4.a-center {
-                flex: 0 0 100%;
-                max-width: 100%;
-                width: 100%;
-                display: block;
-                .homebar-category-img{
-                    img{
-                        width: 100%;
-                    }
-                }
-            }
-            .col-12.col-sm-6.a-center{
-                flex: 0 0 100%;
-                max-width: 100%;
-                .homebar-category-img{
-                    img{
-                        width: 100%;
-                    }
+    }
+    .categorypath-guinness-at-home{
+        .col-12.col-sm-4.a-center {
+            flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+            display: block;
+            .homebar-category-img{
+                img{
+                    width: 100%;
                 }
             }
         }
+        .col-12.col-sm-6.a-center{
+            flex: 0 0 100%;
+            max-width: 100%;
+            .homebar-category-img{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
     .ox-slideout{
         .header.links{
             a{
-                font-size: 30px !important;
+                font-size: 20px !important;
             }
         }
     }  
+    .ox-section-items{
+        .ox-section-item-content{
+            .ox-megamenu-navigation{
+                >.level0{
+                    >.level-top{
+                        font-size: 20px;
+                        padding-right: 30px;
+                    }
+                }
+            }
+        }  
+    }
     .ox-menu__block-before {
         display: none;
     }
@@ -527,10 +738,10 @@
                 .product-guinnessr-des{
                     flex-wrap: wrap;
                     .product-guinnessr-lef{
-                        padding: 40px 15px;
+                        padding: 30px 15px;
                     }
                 }
-             }  
+            }  
         }
         .admin__data-grid-outer-wrap{
             padding: 0 0;
@@ -571,9 +782,6 @@
          .ox-slide-item.slide-content-center{
             .ox-carousel__inner{
                 padding: 20px;
-                &:after{
-
-                }
             }
          }
     } 
@@ -715,7 +923,7 @@
                 width: 100%;
             }
             .converter_contant{
-                position: relative;
+                position: static;
                 top: 0;
                 left: 0;
                 background: @black-color;
@@ -750,32 +958,139 @@
             }
         }
     }
-}
-
-//768
-@media only screen and (max-width: (@screen__768)) { 
-    .action.primary{
-       font-size: 20px;
+    .crosssell .owl-carousel .owl-nav button.owl-next, 
+    .related .owl-carousel .owl-nav button.owl-next, 
+    .upsell .owl-carousel .owl-nav button.owl-next {
+        transform: inherit;
+        right: 0;
     }
-    .footer--layout-2{
-        .footer.content{
-            .block.newsletter.newsletter-style--big{
-                .action.primary{
+    .crosssell .owl-carousel .owl-nav button.owl-prev, 
+    .related .owl-carousel .owl-nav button.owl-prev, 
+    .upsell .owl-carousel .owl-nav button.owl-prev {
+        transform: inherit;
+        left: 0;
+    }
+    .box{
+        &.box-information {
+            width: 100%;
+        }
+    }
+}
+ 
+//768 
+@media only screen and (max-width: (@screen__768)) {
+    .page-main {
+        h2 {
+            font-size: 36px;
+        }
+        h3 {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+        h4 {
+            font-size: 22px;
+        }
+        h5 {
+            font-size: 20px;
+        }
+    }
+    .page-title {
+        font-size: 28px;
+    }
+    .product.media {
+        margin-bottom: 0;
+    }
+    .guinness-your-bar-content {
+        margin: auto;
+    }
+    .form-create-account {
+        &.form.create {
+            padding: 20px;
+            .actions-toolbar {
+                > .secondary {
+                    margin: 0;
+                }
+            }
+        }
+        fieldset {
+            &.fieldset {
+                &.additional_info {
+                    margin-top: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    .action.captcha-reload {
+        margin-top: 10px;
+    }
+    .plan-visit-content {
+        .plan-text {
+            font-size: 14px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .hours {
+            font-size: 14px;
+        }
+    }
+    .category-collections {
+        .main_title {
+            h2 {
+                font-size: 28px;
+            }
+        }
+    }
+    .guinness-your-bar-content {
+        max-width: 100%;
+        padding: 20px 15px;
+    }
+    .margin-bottom {
+        margin-bottom: 60px;
+    }
+    .margin-top {
+        margin-top: 50px;
+    } 
+    .easy-steps-home {
+        padding: 50px 0 50px;
+    }
+    .signature-collection {
+        text-align: center;
+    }
+    .action.primary{
+        font-size: 20px;
+     }
+     .checkout-container {
+        .opc-wrapper {
+            .opc-progress-bar-item {
+                > span {
                     font-size: 20px; 
                 }
             }
         }
-    }  
-    .category-guinness-at-home{
-        .coustrant_condistrt{
-            .block-align-vertical{
-                .block.widget{
-                    margin-bottom: 50px;
+     }
+     .footer--layout-2{
+         .footer.content{
+             .block.newsletter {
+                &.newsletter-style--big{
+                    .action.primary{
+                        font-size: 20px; 
+                    }
                 }
-            }
-        }
-    }
-    .checkout-cart-index{
+             }
+         }
+     }  
+     .category-guinness-at-home{
+         .coustrant_condistrt{
+             .block-align-vertical{
+                 .block.widget{
+                     margin-bottom: 50px;
+                 } 
+             }
+         }
+     }
+     .checkout-cart-index{
         .block.additional-products.at-carousel.crosssell.owl-dots--align-left.owl-nav--position-hover.title--align-.owl-dots--show {
             width: 100%;
         }
@@ -784,12 +1099,32 @@
                 order: 0;
             }
         }
-    }   
-}
-
-
-//767
-@media only screen and (max-width: (@screen__767)) {
+     }
+     .ox-slideout{
+        .header.links{
+            a{
+                font-size: 20px !important;
+            }
+        }
+    }  
+     .ox-section-items{
+        .ox-section-item-content{
+            padding: 12px;
+            .ox-megamenu-navigation{
+                >.level0{
+                    >.level-top{
+                        font-size: 20px;
+                        padding-right: 30px;
+                    }
+                }
+            }
+        }  
+        .ox-nav-sections-item-title{
+            .ox-nav-sections-item-switch {
+                font-size: 20px;
+            }
+        }
+    }
      .above-footer-content {
         .content-wrapper {
             h4 {
@@ -839,7 +1174,35 @@
                         }
                     }
                 }
+            } 
+        }
+        .product-guinnessr-lef {
+            width: 100%;
+            padding: 20px;
+            .product-fix {
+                max-width: 100%;
             }
+        }
+        .product-guinnessr-right {
+            width: 100%;
+            padding: 20px;
+        }
+        .product-guinnessr-images {
+            margin-left: 0;
+            margin-right: 0;
+            img {
+                width: 100%;
+            }
+        }
+        .presentation-box-img {
+            width: 100%;
+        }
+        .presentation-box-center {
+            max-width: 100%;
+            padding: 60px 15px;
+        }
+        .presentation-box-text {
+            width: 100%;
         }
     } 
     .above-footer-content {
@@ -868,7 +1231,8 @@
     form#check-code-form button.action.action-check.primary {
         padding: 9px 20px !important;
     }
-    .footer--layout-4 .footer.content .block.newsletter.newsletter-style--big, .footer--layout-2 .footer.content .block.newsletter.newsletter-style--big {
+    .footer--layout-4 .footer.content .block.newsletter.newsletter-style--big, 
+    .footer--layout-2 .footer.content .block.newsletter.newsletter-style--big {
         padding-top: 60px;
         padding-bottom: 0 !important;
         margin-bottom: 0;
@@ -1009,7 +1373,7 @@
     .container.a-center.same_rtifgt{
         .ox-banner-link{
             .main_iamgestns{
-                top: 6%;
+                padding: 15px;
             }
         }
     }  
@@ -1038,15 +1402,6 @@
                 margin-bottom: 35px;
                 padding-top: 10px;
             }
-        }
-    }  
-    .main_contant.mobile{
-        .converter_contant{
-             p{
-                br {
-                    display: none;
-                }
-             }
         }
     }  
     .clothing-categories-section{
@@ -1202,45 +1557,26 @@
                 width: 100%;
             }
         }
-    }
-    .product-guinnessr-gravity{
-        main#maincontent{
-            .product-custom-description{
-                .product-video-section{
-                    #bgvideo{
-                        height: 435px;
-                    }
-                    .product-video-text{
-                        h2{
-                            font-size: 40px;
-                        }
-                    }
-                }
-            }
-        }
-    }         
-    .product-guinnessr-images{
-        .col-custom{
-            margin:0 22px;
-            img{
-                margin: 50px 0 0;
-            }
-            &:last-child{
-                img{
-                    margin: 50px 0 ;
-                }
-            }
-        }
-    }
+    }   
     button{
         &:after {
             display: none;
         }
     }
+    select.select {
+        height: 40px; 
+    } 
+    input.input-text {
+        height: 40px;
+    }
+    .opc-block-summary {
+        > .title {
+            font-size: 30px !important;
+        }
+    }
     span {
         display: inline-block;
     }
-
     .hightlighted-text{
         &:before{
             display:none;
@@ -1297,7 +1633,6 @@
     }
     .button-custom{
         font-size: 20px !important;
-        margin-bottom: 25px;
     }
     .btn-actrions{
         font-size: 20px;      
@@ -1319,25 +1654,6 @@
                         padding: 50px 15px;
                     }
                  } 
-                .product-guinnessr-des{
-                    flex-wrap: wrap;
-                    .product-guinnessr-lef{
-                        padding: 15px;
-                        margin-top: 50px;
-                        width: 100%;
-                        .product-fix{
-                            max-width: 100%;
-                            h4{
-                                font-size: 36px;
-                            }
-                        }
-                    }
-                    .product-guinnessr-right{
-                        width: 100%;
-                        padding: 50px 15px;
-                        margin-top: 25px;
-                    }
-                }
                 .main_routings{
                     .container{
                         .guinness-draught-content{
@@ -1378,25 +1694,46 @@
             margin-top: 50px;
         }        
     }
-    button.action.secondary{    
-        padding: 10px 20px;
-        span {
-            font-size: 22px;
+    button {
+        &.action{
+            &.secondary{    
+                padding: 10px 20px;
+                span {
+                    font-size: 22px;
+                }
+           }
+           &.action-apply{
+                span {
+                    font-size: 22px;
+                }
+            }
+            &.action-cancel{
+                span {
+                    font-size: 22px;
+                }
+            }
+            &.action-update{
+                span {
+                    font-size: 22px;
+                }
+            }
         }
     }
-    button.action.action-apply{
-        span {
-            font-size: 22px;
-        }
-    }
-    button.action.action-cancel{
-        span {
-            font-size: 22px;
-        }
-    }
-    button.action.action-update{
-        span {
-            font-size: 22px;
+    .contact-index-index {
+        .contacts-layout-split {
+            .contacts-form-block {
+                padding:20px;
+            }
+            .contacts-second-block {
+                .info-block {
+                    strong {
+                        font-size: 14px;
+                    }
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     }
     .product-info-main {
@@ -1485,9 +1822,6 @@
             height: 350px;
         }
     }
-    .product.media {
-        margin-bottom: 0;
-    } 
     .giftcard-template-setting-content {
         .giftcard-template-choose-images{
             margin: 0;
@@ -1582,6 +1916,7 @@
     .giftcard-information-container{
         .giftcard-field-label{
             text-align: left;
+            width: 75px;
         }
     } 
     .product-reviews-summary{
@@ -1665,7 +2000,9 @@
                         }
                     }
                     .hightlighted-text.shop-all{
-                        font-size: 20px;
+                        font-size: 15px;
+                        padding-left:15px;
+                        padding-right: 15px;
                     }
                 }
             }
@@ -1693,18 +2030,6 @@
     }  
     .ox-menu__block-before{
         display: none;
-    }
-    .ox-section-items{
-        .ox-section-item-content{
-            .ox-megamenu-navigation{
-                >.level0{
-                    >.level-top{
-                        font-size: 30px;
-                        padding-right: 30px;
-                    }
-                }
-            }
-        }  
     }
     .product-item{
          .product-item-name{
@@ -1848,15 +2173,26 @@
          }
     }
     .main_contant {
-        margin-bottom: 21px;
+        margin-bottom: 35px;
+    }
+    .plan-visit {
+        margin-bottom: 35px;
     }
     .category-guinness-mens-clothing{
         .text_inshorting { 
             margin-bottom: 0;
         }
     } 
+    .free-shipping-bar {
+        .content {
+            font-size: 14px;
+            padding: 8px 10px;
+        }
+    }
     .above-footer-content{
         .row.centered-iblocks.-stretch{
+            padding-left:20px;
+            padding-right: 20px;
             > div {
                 .icon-wrapper {
                     margin-bottom: 0;
@@ -1868,8 +2204,8 @@
             }
             &:first-child{
                 > div{
-                    padding-left: 15px;
-                    padding-right: 15px;
+                    padding-left: 0;
+                    padding-right: 0;
                  }
             }
         }
@@ -1944,12 +2280,20 @@
         }
     } 
     .main_contant{
-        .converter_contant{
-            p{
-                font-size: 9px;
+        .converter_contant {
+            padding: 15px;
+            position: static;
+            background:@black-color;
+            margin-top: -65px;
+            p { 
+                font-size: 14px;
+                line-height: 20px;
             }
-            h2{
-                font-size: 17px;
+            h2 { 
+                font-size: 44px;  
+                br {
+                    display: none;
+                }
             }
         }
     }  
@@ -1986,11 +2330,10 @@
             }
         }
     }
-
     .category-guinness-at-home {
         .block-title.title-h3 {
             h3 {
-                font-size: 40px;
+                font-size: 28px;
             }
         }
     }
@@ -1998,7 +2341,8 @@
     .category-guinness-at-home {
         .homebar-category-details {
             a {
-                font-size: 30px;
+                font-size: 24px;
+                margin-top: 15px;
             }
         }
     }
@@ -2045,8 +2389,26 @@
     .personalised-carousel {
         min-height:495px;    
     }
+    .imagemain {
+        .main_stert {
+            .main_btn {
+                font-size: 18px;
+                padding: 5px 20px;
+            }
+        }
+    }
 } 
-
+@media only screen and (min-width:991px) {
+    .main_contant {
+        .converter_contant {
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+        }
+    }
+}
 //640
 @media only screen and (min-width: (@screen__640)) {
     .modal__right{
@@ -2073,7 +2435,7 @@
                 right: 0;
                 position: absolute;
                 .counter-number{
-                    border-radius: 30px;
+                    border-radius: 0;
                     line-height: 16px;
                     -webkit-transform: translateZ(0);
                     width: 18px;
@@ -2136,20 +2498,37 @@
             }
         }
     }  
-    .fieldset > .field .fields.group.group-2 .field, .fieldset > .fields > .field .fields.group.group-2 .field{
+    .fieldset > .field .fields.group.group-2 .field, 
+    .fieldset > .fields > .field .fields.group.group-2 .field{
         width: 100% !important;
         margin-bottom: 15px;
     }    
+    .account .column.main .block-dashboard-addresses, 
+    .account .column.main .block-dashboard-info {
+        padding: 15px;
+    }
 }
 
 //479
 @media only screen and (max-width: (@screen__xs - 1)) {
-    .logo {
-        &__container {
-            .logo {
-                max-width: 310px;
-                padding-left: 10px;
-                padding-right: 10px;
+    .page-main {
+        h2 {
+            font-size: 26px;
+        }
+        h3 {
+            font-size: 24px;
+        }
+        h4 {
+            font-size: 20px;
+        }
+        h5 {
+            font-size: 18px;
+        }
+    }
+    .mobile-header--layout-2 {
+        .page-header {
+            .logo__container {
+                width: 110px;
             }
         }
     }
@@ -2163,6 +2542,12 @@
             .action.action-apply {
                 min-width: 100% !important;
             }
+        }
+    }
+    .product-add-form {
+        .product-addto-links {
+            display: flex;
+            justify-content: center;
         }
     }
     .wishlist-index-index {
@@ -2221,6 +2606,13 @@
         .payment-option-inline {
             .actions-toolbar {
                 margin-top: 15px;   
+            }
+        }
+    }
+    .filters-action {
+        .hamburger-menu-icon-small {
+            ~ .label {
+                display: none;
             }
         }
     }

@@ -1,7 +1,131 @@
 .page-main {
+    h2 {
+        font-size: 60px;
+    }
+    h3 {
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+    h4 {
+        font-size: 36px;
+    }
+    h5 {
+        font-size: 30px;
+    }
+} 
+
+.margin-top {
+    margin-top: 90px;
+}
+
+.margin-bottom {
+    margin-bottom: 100px;
+} 
+.text-white {
+    color: @white-color !important;
+}
+ 
+.page-main {
     .field.choice {
         .field-tooltip {
             top: 6px;
         }
     }
+}
+.text-center {
+    text-align: center;
+}
+
+.button-custom{
+	background: @gold-color;
+    padding: 10px 20px;
+    font-size: 24px !important;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    font-weight: 400;
+    color: @black-color;
+    font-family: @font-knockout;
+    text-transform: uppercase;
+    border:1px solid @gold-color;
+    &:hover{
+    	background-color:@black-color;
+        border-color: @black-color;
+    	color: @white-color;
+    }
+    &:after{
+    	display:none;
+    }
+    &.white-btn {
+        background: transparent;
+        border-color: @white-color;
+        color: @white-color;
+        &:hover{
+            background-color: @gold-color;
+            border-color:  @gold-color;
+            color: @white-color;
+        }
+    }
+    &.black-btn {
+        background: @black-color;
+        border-color: @black-color;
+        color: @white-color;
+        &:hover{ 
+            background-color: @white-color;
+            border-color: @white-color;
+            color: @black-color;
+        }
+    }
+}
+
+button.button-custom {
+    font-size: 24px;
+    color: @black-color;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    &:hover{
+    	background-color: @black-color;
+    	color: @white-color;
+        border: 1px solid @black-color;
+    }
+    &::after{
+    	background-color:@white-color;
+    	display: none;
+    }
+}
+
+img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+    border: none;
+}
+
+.message {
+    &.notice {
+        &:before {
+            background-color: @gold-color;
+        }
+    }
+    &.success {
+        &:before {
+            background-color: @gold-color;
+        }
+    }
+}
+
+.checkout-onepage-success {
+    .page-title-wrapper {
+        .success-icon-wrapper {
+            &:before {
+                background-color: @gold-color;
+            }
+        }
+    }
+}
+
+select.select {
+    height: 55px; 
 }

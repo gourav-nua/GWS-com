@@ -1,0 +1,19 @@
+<?php
+	$_product = $block->getProduct();
+	if($_product->getSizeGuide()):
+?>
+<div id="pschart-showsizes-onpage" class="pschart-showsizes">
+	<a href="javascript:void(0)" id="pschart-selector" class="pschart-selector"><span><?= __('Size guide')?></span></a>
+</div>
+<div class="pschart-content" id="pschart-content" style="display: none;">
+	<?php echo $_product->getSizeGuide(); ?>
+</div>
+<?php endif; ?>
+
+<script type="text/javascript">
+	require(['jquery', 'jquery/ui'], function($){  
+	    $('#pschart-selector').click(function () {
+	       $('#pschart-content').slideToggle();
+	    });
+  	});
+</script>

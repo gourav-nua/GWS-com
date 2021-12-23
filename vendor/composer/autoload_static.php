@@ -485,6 +485,7 @@ class ComposerStaticInit53c2c0f0977e894dc082255d9d73ac01
         '2451819c9c2b818eb9be5f36b51585ea' => __DIR__ . '/..' . '/magento/module-wishlist-graph-ql/registration.php',
         'd04d5084d3db908d3544ed506541866a' => __DIR__ . '/..' . '/magento/theme-adminhtml-backend/registration.php',
         '7102f9cf0d2c08bc731a7e185c1c8bfc' => __DIR__ . '/..' . '/magento/theme-frontend-luma/registration.php',
+        'b5843d9aa73dbbe9d709b76cbd3ff36f' => __DIR__ . '/..' . '/magepal/magento2-core/registration.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
         'aa75ea0761a2f40c1f3b32ad314f86c4' => __DIR__ . '/..' . '/phpseclib/mcrypt_compat/lib/mcrypt.php',
@@ -493,6 +494,8 @@ class ComposerStaticInit53c2c0f0977e894dc082255d9d73ac01
         '0675d4e4a5ec2bff513f44d595f3b063' => __DIR__ . '/..' . '/magento/data-migration-tool/src/Migration/cli_commands.php',
         'a1a5ee93938163d4806d2cc4f289e75c' => __DIR__ . '/..' . '/magento/data-migration-tool/registration.php',
         'eda65932675b68b5aee4503e0762d64d' => __DIR__ . '/..' . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
+        '0ba5079bc0aa31645404935d16e5e118' => __DIR__ . '/..' . '/magepal/magento2-gmailsmtpapp/registration.php',
+        '6b5b87bda6fedcf6ef8605219c8b67f2' => __DIR__ . '/..' . '/mageplaza/module-core/registration.php',
         'b4cf39431a4b949eea8aa69ebb3d39da' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
     );
 
@@ -602,6 +605,7 @@ class ComposerStaticInit53c2c0f0977e894dc082255d9d73ac01
             'MyCLabs\\Enum\\' => 13,
             'Monolog\\' => 8,
             'Migration\\' => 10,
+            'Mageplaza\\Core\\' => 15,
             'Magento\\Wishlist\\' => 17,
             'Magento\\WishlistGraphQl\\' => 24,
             'Magento\\WishlistAnalytics\\' => 26,
@@ -925,6 +929,8 @@ class ComposerStaticInit53c2c0f0977e894dc082255d9d73ac01
             'Magento\\AdminAnalytics\\' => 23,
             'Magento\\' => 8,
             'Magento2\\' => 9,
+            'MagePal\\GmailSmtpApp\\' => 21,
+            'MagePal\\Core\\' => 13,
             'MFTF\\' => 5,
         ),
         'L' => 
@@ -1347,6 +1353,10 @@ class ComposerStaticInit53c2c0f0977e894dc082255d9d73ac01
         'Migration\\' => 
         array (
             0 => __DIR__ . '/..' . '/magento/data-migration-tool/src/Migration',
+        ),
+        'Mageplaza\\Core\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mageplaza/module-core',
         ),
         'Magento\\Wishlist\\' => 
         array (
@@ -2640,6 +2650,14 @@ class ComposerStaticInit53c2c0f0977e894dc082255d9d73ac01
         'Magento2\\' => 
         array (
             0 => __DIR__ . '/..' . '/magento/magento-coding-standard/Magento2',
+        ),
+        'MagePal\\GmailSmtpApp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/magepal/magento2-gmailsmtpapp',
+        ),
+        'MagePal\\Core\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/magepal/magento2-core',
         ),
         'MFTF\\' => 
         array (

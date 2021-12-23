@@ -27,6 +27,15 @@
             > .title {
                 font-weight: @font-weight-400;
             }
+            .product-item {
+                dl.item-options {
+                    dt {
+                        width: auto;
+                        padding-right: 5px;
+                        font-size: 14px;
+                    }
+                }
+            }
         }
         .opc-block-shipping-information {
             .shipping-information-title {
@@ -206,6 +215,31 @@ button.button.action.continue.primary {
     label {
         font-family: @font-gotham-book;
     }
+    .page-header {
+        .sticky-wrapper {
+            padding: 25px 0;
+        }
+    }
+    .opc-sidebar {
+        margin-top: 0;
+    }
+    .page-header {
+        .logo__container {
+            display: inline-block;
+            min-height: auto;
+        }
+    }
+    .block-authentication {
+        .actions-toolbar {
+            > .secondary {
+                > a.action{ 
+                    &:hover {
+                        color: @white-color;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .field-tooltip-content{
@@ -246,3 +280,10 @@ button.button.action.continue.primary {
         }
     }
 }
+
+#customer-email-fieldset {
+    .mage-error {
+        display: block;
+    }
+}
+

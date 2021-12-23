@@ -51,3 +51,39 @@
         }
     }
 }
+
+.action {
+    &.captcha-reload {
+        background:@black-color;
+        font-size: 0;
+        padding: 14px 15px;
+        &:hover {
+            background-color: @gold-color;
+        }
+        &:before {
+            content: "\f2f1";
+            font-family: "Font Awesome 5 Free";
+            display: block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            font-size: 22px;
+            font-weight: 900;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.form-create-account {
+    fieldset {
+        &.fieldset {
+            &.additional_info {
+                padding-right: 25px;
+                margin-top: -60px;
+            }
+        }
+    }
+}

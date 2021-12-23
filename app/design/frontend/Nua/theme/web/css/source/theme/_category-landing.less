@@ -10,9 +10,7 @@
     }
     .converter_contant {
 	    position: absolute;
-	    top: 23%;
-	    left: 2%;
-	    right: 0;
+		padding: 30px;
 	    h2{
 	    	font-size: 88px;
     		color: @white-color;
@@ -23,6 +21,7 @@
     		font-weight: 600;
     		line-height: 36px;
     		text-transform: uppercase;
+			max-width: 500px; 
 	    }
 	}
 }
@@ -124,13 +123,7 @@ input.input-text {
 			font-size: 13px;
 		}
 	}
-}
-.cms-faq{
-	.ox-toggle.collapsible.medium-right {
-	    padding: 15px 0;
-	} 
-}
-   
+}  
 .ox-banner.banner-stretch.desktop-beer {
     display: block;
 }
@@ -166,7 +159,6 @@ input.input-text {
     	flex: 0 0 700px;
 	}
 	.ox-megamenu__categories {
-		flex-grow: 0.5;
 		.ox-megamenu-list{
 			.level1.submenu{
 				.level2{
@@ -229,9 +221,6 @@ input.input-text {
 	}
 }
 .clothing-accessories{
-	.ox-menu-col{
-		flex-grow: 0.5;
-	}
 	.ox-megamenu-block.ox-megamenu-block-right.ox-menu-col.ox-menu-col-6 {
 	    flex: 0 0 100%;
 	    max-width: 57%;
@@ -325,104 +314,126 @@ input.input-text {
 		}
 	}	
 }  
-.category-official-guinness-glassware {
-	.container {
-	    padding: 0;
+ 
+.black-friday-row {
+	background-color: @black-color;
+	.block-content {
+		padding-top: 15px;
 	}
-	.block-align-vertical{
-		position: relative;
-		display: block;
-		.ox-banner{
-			height: 100%;
-			&:last-child{
-				.category-caption.caption-blue{
-			    	padding-left: 50px;
-			    }
-			}
-			&:hover{
-				img{
-					transform: inherit;
-				}
-			}
-			.category-caption.caption-blue{
-				position: relative;
-			    left: 0;
-			    padding: 22px;
-			    bottom: 0;
-			    margin-top: -52px;
-			    text-align: left; 
-			    p{
-			        margin: 0;
-			        line-height: 65px;
-			    	a{
-			    		font-size: 48px;
-					    color: @white-color;
-					    font-family: @font-knockout;
-					    text-transform: uppercase;
-			    	}
-			    }
-			   	.cat-description{
-			   		font-size: 18px;
-				    color: @white-color;
-				    margin-bottom: 15px;
-				    line-height: initial;
-				    max-width: 701px;
-				    width: 100%;
-			    }
-			    .hightlighted-text.shop-all {
-				    background:@gold-color;
-				    padding: 12px 20px;
-				    font-size: 24px;
-				    font-family: @font-knockout;
-				    text-transform: uppercase;
-				    &:brfore{
-				    	background: transparent;
-				    }
-				    &:hover{
-				    	background: @white-color;
-				    	&:brfore{
-					    	background: @white-color;
-					    }
-				    }
+	.block-align-vertical {
+		.ox-banner {
+			.category-caption {
+				&.caption-blue{
+					margin-top: -80px;
+					h2 {
+						font-size: 100px;
+						color: @white-color;
+						margin: 0;
+						line-height: 1;
+					}
 				}
 			}
 		}
 	}
-	.products-grid{
-		.product-items{
-		    margin-top: 15px;
-			.product-item{
-			    margin-bottom: 15px;
-				.product-item-info{
-					max-width: 95%;
-				    margin: 0 auto;
-				    background: @white-color;
-					height: 100%;
-				}
-			}
-		}
-	}
-	.glassware-categories{
-		text-align: left;
-		padding: 0;
-    	margin: 0;
-		.glassware-category-img{
-			span{
-				text-align: left;
-			    font-size: 36px;
-			    text-transform: uppercase;
-			    margin-top: 6px;
-			    font-family: @font-knockout;
-			    display: block;
-			}
-		}
-	}
-	.category-cms{
-		.row.no-margin.coustamotyr {
-		    margin-bottom: 50px !important;
-		}
-	} 
 }
+.categories-row {
+	.glassware-categories{
+		padding: 0;
+	}
+}	 
+.block-align-vertical{
+	position: relative;
+	display: block;
+	.ox-banner{
+		height: 100%;
+		&:last-child{
+			.category-caption.caption-blue{
+				padding-left: 50px;
+			}
+		}
+		&:hover{
+			img{
+				transform: inherit;
+			}
+		}
+		.category-caption.caption-blue{
+			position: relative;
+			left: 0;
+			padding: 22px;
+			bottom: 0;
+			margin-top: -52px;
+			text-align: left; 
+			p{
+				margin: 0;
+				line-height: 65px;
+				a{
+					font-size: 48px;
+					color: @white-color;
+					font-family: @font-knockout;
+					text-transform: uppercase;
+					line-height: 44px;
+				}
+			}
+			.cat-description{
+				font-size: 18px;
+				color: @white-color;
+				margin-bottom: 15px;
+				line-height: initial;
+				width: 100%;
+			}
+			.hightlighted-text.shop-all {
+				background:@gold-color;
+				padding: 12px 20px;
+				font-size: 24px;
+				font-family: @font-knockout;
+				text-transform: uppercase;
+				&:brfore{
+					background: transparent;
+				}
+				&:hover{
+					background: @white-color;
+					&:brfore{
+						background: @white-color;
+					}
+				}
+			}
+		}
+	}
+}
+.products-grid{
+	.product-items{
+		.product-item{
+			margin: 10px 0;
+			.product-item-info{
+				max-width: 95%;
+				margin: 0 auto;
+				background: @white-color;
+				height: 100%;
+			}
+		}
+	}
+}
+.glassware-categories{
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	.glassware-category-img{
+		span{
+			text-align: left;
+			font-size: 36px;
+			text-transform: uppercase;
+			margin-top: 6px;
+			font-family: @font-knockout;
+			display: block;
+		}
+	}
+}
+.category-cms{
+	.row.no-margin.coustamotyr {
+		margin-bottom: 50px !important;
+	}
+} 
+ 
 .product-e-gift-card{
 	.athlete2_product__bottom {
 	    display: none;
@@ -538,4 +549,133 @@ form#check-code-form{
 	button.action.action-check.primary {
 	    padding: 7px 20px !important;
 	}	
+}
+
+
+ 
+.text_inshorting {
+	margin-bottom: 50px;
+}
+.imagemain{
+	position: relative;
+	&:hover{
+		.main_stert{
+			opacity: 1;
+		}
+	}
+	img{
+		opacity: 1;
+		display: block;
+		width: 100%;
+		height: auto;
+		transition: .5s ease;
+		backface-visibility: hidden;
+	}
+	.main_stert {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: .5s ease;
+			background-color: rgba(188, 150, 108, 0.5);
+		.main_btn {
+			font-size: 24px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+			text-transform: uppercase;
+			color: @white-color;
+			padding: 0px 54px;
+			border: 1px solid @white-color;
+			font-family: @font-knockout;
+		}
+	}
+}
+.main_title{
+	h2 {
+		font-size: 36px;
+		padding-top: 20px;
+		color: @black-color;
+		display: block;
+	}
+}
+ 
+
+.catalog-category-view {
+	&.guinness-opengateberry-body {
+		.column.main {
+			.breadcrumbs,
+			.page-title-wrapper {
+				max-width: 1810px;
+				margin-left: auto;
+				margin-right: auto;
+				padding-top: 35px;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+	}
+}
+
+h2.category-landing-title {
+	margin-bottom: 35px;
+}
+
+.plan-visit {
+	background-color: @gold-light;
+} 
+
+.plan-visit-content {
+	.plan-text {
+		font-size: 18px;
+		font-weight: 600;
+	}
+	p {
+		font-size: 16px;
+		font-family: @font-gotham-book;
+	}
+	.button-custom {
+		background-color: @bright-red;
+		border-color: @bright-red;
+		color: @white-color; 
+		&:hover {
+			background-color: @black-color;
+			border-color: @black-color;
+			color: @white-color;
+		}
+	}
+	h3 {
+		color: @bright-red;
+	}
+	h4 {
+		color: @bright-red;
+	}
+}
+.landing-sub {
+    background: @gold-color;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.easy-steps-home { 
+	padding: 100px 0;
+    background:@black-color;
+}
+.guinness-your-bar {
+	background-color: @gold-color;
+}
+
+.guinness-your-bar-content {
+    max-width: 450px;
+    text-align: center;
+    margin-left: auto;
+    padding: 20px;
 }

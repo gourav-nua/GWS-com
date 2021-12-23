@@ -10,6 +10,7 @@
         <!-- <link rel="stylesheet" as="style" media="all" href="https://cloud.typography.com/7519554/7918412/css/fonts.css" /> -->
     </head>
     <body>
-    	<referenceBlock name="store.settings" remove="true"/>
+        <!-- <move element="currency" destination="athlete2_header" after="-"/> -->
+    	<!-- <referenceBlock name="store.settings" remove="true"/> -->
     </body>
 </page>

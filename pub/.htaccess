@@ -122,6 +122,28 @@
     Options +FollowSymLinks
     RewriteEngine on
 
+    #RewriteCond %{REMOTE_ADDR} !^103\.8\.216\.140 
+    #RewriteCond %{REMOTE_ADDR} !^27\.54\.168\.186 
+    #RewriteCond %{REMOTE_ADDR} !^75\.89\.68\.167
+    #RewriteCond %{REMOTE_ADDR} !^37\.228\.255\.225
+    #RewriteCond %{REMOTE_ADDR} !^86\.41\.146\.28
+    #RewriteCond %{REMOTE_ADDR} !^51\.171\.68\.97
+    #RewriteCond %{REMOTE_ADDR} !^46\.7\.174\.61
+    #RewriteCond %{REMOTE_ADDR} !^103\.238\.104\.149
+    #RewriteCond %{REMOTE_ADDR} !^103\.250\.139\.126
+    RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f    
+    RewriteCond %{DOCUMENT_ROOT}/maintenance.enable -f  
+    RewriteCond %{SCRIPT_FILENAME} !maintenance.html    
+    RewriteCond %{SCRIPT_FILENAME} !maintenance.css 
+    RewriteCond %{SCRIPT_FILENAME} !logo.png    
+    RewriteRule ^.*$ /maintenance.html [L]  
+    ErrorDocument 503 /maintenance.html 
+
+   RewriteCond %{HTTP_HOST} ^www.hanley.ie [NC]
+   RewriteRule ^(.*)$ https://hanley.ie/$1 [L,R=301]
+
+    Header Set Cache-Control "max-age=0, no-store"
+
 ############################################
 ## You can put here your magento root folder
 ## path relative to web root

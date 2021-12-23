@@ -159,13 +159,6 @@
 		}
 	}
 } 
-.checkout-index-index{
-	.page-header{
-		.logo__container{
-			    margin: 25px 0;
-		}
-	} 
-}
 .clothing-categories-section{
     margin: 75px auto;
 	.clothing-title {
@@ -326,15 +319,18 @@
 .container.a-center.same_rtifgt {
     padding: 0;
     margin-bottom: 100px;
-	.ox-banner-link{
+	.ox-banner-link{ 
 		display: block!important;
 		position: relative;
 		.main_iamgestns {
-		    position: absolute;
-		    top: 30%;
-		    left: 26px;
-		    bottom: 0;
-		    text-align: left;
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%); 
+			-o-transform: translateY(-50%);
+			position: absolute;
+			text-align: left;  
+			padding: 30px;
 		    h6 {
 			    font-size: 48px;
 			    color: @white-color;
@@ -483,7 +479,7 @@
     position: relative;
     line-height: 1em;
     z-index: 99;
-    span{    	
+    span{
 	    font-weight: 400;
 	    color: @black-color;
 	    font-family: @font-knockout;
@@ -530,22 +526,7 @@
 		}
 	}
 } 
-button.button-custom {
-    font-size: 24px;
-    color: @black-color;
-    display: inline-block;
-    position: relative;
-    line-height: 1em;
-    z-index: 99;
-    &:hover{
-    	background-color:@white-color;
-    	color: @black-color;
-    }
-    &:afetr{
-    	background-color:@white-color;
-    	display: none;
-    }
-}
+
 #ox_carousel_0ee9e{
 	.ox-slide-item{
 		height: auto;

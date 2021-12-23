@@ -15,6 +15,8 @@
         "magento/composer-root-update-plugin": "~1.1",
         "magento/data-migration-tool": "2.4.2",
         "magento/product-community-edition": "2.4.2",
+        "magepal/magento2-gmailsmtpapp": "^2.8",
+        "mageplaza/module-core": "^1.4",
         "stripe/stripe-payments": "^2.7"
     },
     "autoload": {

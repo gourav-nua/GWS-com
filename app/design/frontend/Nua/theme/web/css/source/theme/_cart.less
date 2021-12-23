@@ -11,10 +11,7 @@
         &.delete {
             padding-top: 3px;
             padding-bottom: 3px;
-            &:before {
-                content: "\f014";
-                font: normal normal normal 14px/1 FontAwesome;
-            }
+            line-height: 10px;
         }
     }
 
@@ -93,6 +90,9 @@
                                 .action {
                                     &.update {
                                         background-color: @black-color;
+                                        &::before {
+                                            font-size: 0;
+                                        }
                                         &:hover {
                                             &:after { 
                                                 background-color: @gold-color;
