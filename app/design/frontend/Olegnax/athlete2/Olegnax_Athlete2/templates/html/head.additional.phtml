@@ -7,10 +7,10 @@ if($themeFont){
 <?php
 }
 if ($this->getConfig('athlete2_design/appearance_general/google_font_enable')) {
-    ?>
+    ?> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="<?= $_helper->getGoogleFontUrl(); ?>" rel="stylesheet">
+<?php /*<link href="<?= $_helper->getGoogleFontUrl(); ?>" rel="stylesheet"> */?>
 <?php } ?>
 <?php if (!$this->getConfig('athlete2_design/appearance_custom/inline_css')) { ?>
 	<link rel="stylesheet" media="all" type="text/css" 

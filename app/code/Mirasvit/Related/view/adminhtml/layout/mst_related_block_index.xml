@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Mirasvit\Core\Ui\QuickDataBar\DataBar">
+                <block class="Mirasvit\Related\Ui\Block\Listing\QuickDataBar\RevenueDataBlock"/>
+                <block class="Mirasvit\Related\Ui\Block\Listing\QuickDataBar\OrderDataBlock"/>
+                <block class="Mirasvit\Related\Ui\Block\Listing\QuickDataBar\ClickDataBlock"/>
+                <block class="Mirasvit\Related\Ui\Block\Listing\QuickDataBar\ImpressionDataBlock"/>
+            </block>
+
+            <uiComponent name="related_block_listing"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,22 @@
+<?php
+
+use Magento\Catalog\Block\Product\ReviewRendererInterface;
+
+/** @var \Mirasvit\Related\Block\Block $block */
+$products = $block->getProducts();
+
+if (count($products) == 0) {
+    return;
+}
+
+$productSkuList = [];
+foreach ($products as $product) {
+    $productSkuList[] = $product->getSku();
+}
+
+$productsBlock = $block->getLayout()->createBlock('\Magento\CatalogWidget\Block\Product\ProductsList');
+$productsBlock->setTitle($block->getTitle());
+$productsBlock->setTemplate("product/widget/content/grid.phtml");
+$productsBlock->setConditionsEncoded('{"1":{"type":"Magento\\\CatalogWidget\\\Model\\\Rule\\\Condition\\\Combine","aggregator":"all","value":"1","new_child":""},"1--1":{"type":"Magento\\\CatalogWidget\\\Model\\\Rule\\\Condition\\\Product","attribute":"sku","operator":"()",
+    "value":"'. implode(', ', $productSkuList) .'"}}');
+echo $productsBlock->toHtml();

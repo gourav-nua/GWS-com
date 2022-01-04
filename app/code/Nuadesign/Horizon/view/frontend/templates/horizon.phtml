@@ -1,0 +1,141 @@
+<?php 
+
+$ageVerify = '';
+$nonMuslim = 0;
+$formatVal = 0;
+$formatClass = 'formathide';
+
+$countryAgeCheck = $block->__getcountryCode();
+
+$countryCheckIP = $block->__getCountryFromIP();
+
+$nonMuslimArray = $block->__nonMuslim();
+
+
+if($countryCheckIP->geoplugin_status != 404)
+{
+    $countryName = $countryCheckIP->geoplugin_countryName ;
+    $countryCode = $countryCheckIP->geoplugin_countryCode ;    
+} else{
+
+    $countryName = 'United States' ;
+    $countryCode = 'US' ;
+}
+
+foreach($countryAgeCheck as $key => $value):
+    if($key == $countryCode):
+        $ageVerify = $value; 
+    endif; 
+endforeach; 
+
+
+if (in_array($countryCode, $nonMuslimArray)):
+    $nonMuslim = 1;
+endif; 
+
+$nonMuslimClass = $nonMuslim == 1 ? 'nonmuslimshow': 'nonmuslimhide';
+
+?>
+
+<div data-mage-init='{"horizonjs": {}}' id="age_gate" style="display:none;">
+    <div id="age_content">
+        <form name="Age Gateway Form" method="post" action="">
+            <div class="age_logo">
+                <?php
+                    echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('age_gate_logo')->toHtml();
+                ?>
+            </div>
+            <div class="age_header_title">
+                <span class="langable" data-lang="enter_site"><?= __('Can we see some ID please?');?></span>
+            </div>
+            <div id="age_header_subtitle">
+                <span class="langable" data-lang="site_header"><?= __('It\'s part of our commitment to responsible drinking.');?></span>
+            </div>
+            <div id="age_horizontal_line">
+                <div class="line"></div>
+            </div>
+            <div id="age_missing_message" class="missing-message-all">
+                <span class="langable" data-lang="missing_fields"><?= __('Please enter your date of birth');?></span>
+            </div>
+
+            <div id="age_verification_message" class="missing-message-all">
+                <span class="langable" data-lang="missing_fields"><?= __('Sorry, your age or location does not permit you to enter at this time.');?></span>
+            </div>
+
+            <div class="age_birthdate">
+                <div class="age_birth_title_label">
+                    <span class="langable" data-lang="enter_birthdate"><?= __('Enter your birthdate:');?></span>
+                </div>
+            </div>
+
+            <div id="age_age_group">
+                <!-- <div id="age_age_date_textfield">
+                    <input id="age_select_date_of_birth" type="text" name="age_date_textfield" size="18" maxlength="10">
+                </div> -->
+
+                <div id="age_age_date_input_textfield" style="display: none;">
+                    <input id="age_select_day_of_birth" class="age_select_date_of_birth" type="tel" name="age_date_day_textfield" size="2" maxlength="2" placeholder="DD" tabindex="1">
+                    <input id="age_select_month_of_birth" class="age_select_date_of_birth" type="tel" name="age_date_month_textfield" size="2" maxlength="2" placeholder="MM" tabindex="2">
+                    <input id="age_select_year_of_birth" class="age_select_date_of_birth" type="tel" name="age_date_month_textfield" size="2" maxlength="2" placeholder="YY" tabindex="3">
+                </div>
+
+                <div id="age_age_date_picker" style="display: none;">
+                    <input id="age_select_date_picker" type="date" class="placeholder" placeholder="DD/MM/YYYY" min="0000-1-1" max="9999-12-31">
+                </div>
+
+                <div id="age_age_select_group" style="display: block;">
+                    <div id="age_age">
+                        <div class="age_gate_3">
+                            <?= $block->_getAgeSelectDay();?>
+                            <?= $block->_getAgeSelectMonth();?>
+                            <?= $block->_getAgeSelectYear();?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" value="<?= $ageVerify; ?>" name="age-verify" id="age-verify"/>
+
+            <input type="hidden" value="<?= $nonMuslim; ?>" name="partial-verify" id="partial-verify"/>
+
+            <div id="age_confirm_non_muslim" class="age_field <?= $nonMuslimClass;?>" style="font-weight: normal; font-size: 14px;">
+                <label id="age_affirm_label">
+                    <div id="age_affirm_text_box" style="color:rgb(241,228,215);">
+                        <input type="checkbox" name="age_affirm_non_muslim" id="age_checkbox_affirm_non_muslim"/>
+                        Yes, I am a non-Muslim and aged <?= $ageVerify; ?> years and above
+                    </div>
+                </label>
+            </div>
+            <div class="age_privacy">
+                <span class="langable" data-lang="by_entering">This site uses cookies and by entering you acknowledge that you have read our <a href="https://footer.diageohorizon.com/dfs/assets/www.guinnesswebstore.co.uk/PrivacyPolicy_en.html?locale=en-gb&amp;tnc=true" rel="noopener" class="age_privacy_link" target="_blank" tabindex="0">Privacy and Cookie Notice</a>.</span>
+                <span class="langable" id="by_entering_eu" data-lang="by_entering" style="display: none;">This site uses cookies and by entering you acknowledge that you have read our <a href="https://footer.diageohorizon.com/dfs/assets/www.guinnesswebstore.co.uk/PrivacyPolicy_en.html?locale=en-gb&amp;tnc=true" rel="noopener" class="age_privacy_link" target="_blank" tabindex="0">Privacy and Cookie Notice</a>.</span>
+            </div>
+            <div class="age_field">
+                <label id="age_remember_label">
+                    <input type="checkbox" name="age_remember_me" id="age_checkbox_remember_me">
+                    <span class="langable age_remember_me_basic" data-lang="remember_me">Remember me on this device (unless shared)</span>
+                </label>
+            </div>
+            <div id="age_confirm">
+                <input id="age_confirm_btn" type="button" value="Enter" class="langable" data-lang="enter"/>
+            </div>
+            <div class="age_group">
+                <ul id="age_select_country_group">
+                     <li class="country">
+                        <div id="selected_country_data"></div>
+                        <a href="#" id="show_selected_country" data-country="<?= $countryCode;?>" onkeydown="checkToShowDropdown(event,'age_select_country')">
+                            <?= $countryName; ?></a>
+                        <?= $block->_getAgeSelectCountry();?>
+                     </li>
+                     <li class="language" style="display: none;">
+                        <a href="#" id="show_selected_language" onkeydown="checkToShowDropdown(event,'age_select_language')" style="display: none;"></a>
+                        <select id="age_select_language" class="select_drop_menu_default_style" tabindex="-1"></select>
+                    </li>
+                </ul>
+            </div>
+            <div class="age_terms">
+                <span class="langable" data-lang="terms_content"><a href="https://footer.diageohorizon.com/dfs/assets/www.guinnesswebstore.co.uk/TnC_en.html?locale=en-gb&amp;tnc=true" rel="noopener" class="age_tnc_link" style="color:rgb(241,228,215)" target="_blank" tabindex="0">Conditions of Use</a></span>
+            </div>
+        </form>
+    </div>
+</div>

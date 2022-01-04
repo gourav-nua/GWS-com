@@ -226,6 +226,49 @@
             }
         } 
     } 
+    .account {
+        .column.main {
+            .toolbar {
+                &.wishlist-toolbar {
+                    .limiter {
+                        float: right;
+                    }
+                    .toolbar-amount {
+                        float: left;
+                    }
+                }
+            } 
+        }
+    }
+    .ox-slideout {
+        .switcher.store {
+            .options {
+                .action.toggle {
+                    strong {
+                        span {
+                            background-color: transparent; 
+                            color: @black-color;
+                            background-size: 22px;
+                            padding-left: 40px;
+                        }
+                    }
+                }
+                ul.dropdown {
+                    a {
+                        padding-left: 30px;
+                        background-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .header__content {
+        .switcher-options {
+            &.header-store-switcher {
+                display: none;
+            }
+        }
+    }
     .category-guinness-at-home {
         .coustrant_condistrt {
             .block-align-vertical {
@@ -477,6 +520,21 @@
     .main_title {
         h2 {
             font-size: 28px;
+        }
+    }
+    .form-create-account {
+        fieldset {
+            &.fieldset {
+                &.additional_info {
+                    margin-top: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    .action{
+        &.captcha-reload {
+            margin-top: 10px;
         }
     }
 }
@@ -914,6 +972,12 @@
          }
     }
     .main_contant {
+        .converter_contant {
+            padding: 15px;
+            position: static;
+            background:@black-color;
+            margin-top: -65px;
+        }
         &.destop {
             display: none;
         }
@@ -975,6 +1039,19 @@
             width: 100%;
         }
     }
+    .ox-fixed {
+        &.ox-fixed-slideout {
+            &.ox-fixed-slideout-right {
+                .mfp-wrap {
+                    overflow: unset !important;
+                }
+                .mfp-container {
+                    height: 100vh;
+                    overflow: auto;
+                }
+            }
+        }
+   }
 }
  
 //768 
@@ -1011,18 +1088,23 @@
                     margin: 0;
                 }
             }
-        }
-        fieldset {
-            &.fieldset {
-                &.additional_info {
-                    margin-top: 0;
-                    padding-right: 0;
-                }
-            }
+        }   
+    }
+    .ox-banner-maintors{
+        .custom-text {
+            padding: 20px;
+            max-width: 100%;
         }
     }
-    .action.captcha-reload {
-        margin-top: 10px;
+    .wp-confirmation-popup {
+        .added-to-cart-msg {
+            padding-top: 10px;
+        }
+        .mfp-close {
+            width: auto;
+            height: auto;
+            line-height: 30px;
+        }
     }
     .plan-visit-content {
         .plan-text {
@@ -1559,13 +1641,15 @@
         }
     }   
     button{
-        &:after {
+        &:after { 
             display: none;
         }
     }
-    select.select {
-        height: 40px; 
-    } 
+    body {
+        select {
+            height: 40px; 
+        } 
+    }
     input.input-text {
         height: 40px;
     }
@@ -1940,6 +2024,7 @@
             .breadcrumbs {
                 padding: 20px;
                 padding-top: 25px;
+                padding-left: 0; 
             }
         }
     }  
@@ -2281,10 +2366,6 @@
     } 
     .main_contant{
         .converter_contant {
-            padding: 15px;
-            position: static;
-            background:@black-color;
-            margin-top: -65px;
             p { 
                 font-size: 14px;
                 line-height: 20px;
@@ -2397,6 +2478,22 @@
             }
         }
     }
+    .wp-confirmation-popup { 
+        .product-item-details {
+            padding-right: 15px;
+        }
+        .product-item-pricing {
+            position: static; 
+           .original-price {
+               float: none;
+           }
+        }
+        .product-item-details {
+            strong.product-item-name {
+                margin-bottom: 10px;
+            }
+        }
+    }
 } 
 @media only screen and (min-width:991px) {
     .main_contant {
@@ -2406,6 +2503,7 @@
             -webkit-transform: translateY(-50%);
             -moz-transform: translateY(-50%);
             -o-transform: translateY(-50%);
+            position: absolute;
         }
     }
 }

@@ -13,9 +13,19 @@
               <block class="Magento\Catalog\Block\Product\View" name="extra" template="Magento_Catalog::product/view/customDescription.phtml" />
           </container>        
         </referenceContainer>
+        <referenceContainer name="main.content">
+          <block class="Magento\Cms\Block\Block" name="recently-view-products" after="-">
+            <arguments>
+              <argument name="block_id" xsi:type="string">recently-view-products</argument>
+            </arguments>
+          </block>
+        </referenceContainer>
         <referenceBlock name="product.info.options.wrapper.bottom">
             <block class="Magento\Catalog\Block\Product\View" name="size-guide" template="Magento_Catalog::product/view/sizeGuide.phtml" before="-" />    
         </referenceBlock>
+        <referenceContainer name="product.info.media">
+            <block class="Magento\Catalog\Block\Product\View" name="winter-sale-label" before="-" template="Magento_Catalog::product/view/wintersale.phtml"/>
+        </referenceContainer>
         <move element="size-guide" destination="product.info.main" after="product.info.overview"/>
         <move element="product.info.stock.sku" destination="product.info.price" before="product.price.final"/>
     </body>

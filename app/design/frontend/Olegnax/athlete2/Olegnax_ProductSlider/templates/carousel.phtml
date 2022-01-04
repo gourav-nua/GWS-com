@@ -98,7 +98,7 @@ use Magento\Framework\App\Action\Action;
 				<div class="product-items owl-carousel <?= /* @noEscape */ $type ?>" data-role="product-owlCarousel" data-mage-init='{"OXowlCarousel":<?= $block->getCarouselOptions() ?>}'>
 					<?php $iterator = 1; ?>
 					<?php foreach ( $items as $_item ): ?>
-						<div class="product-item-info">
+						<div class="product-item-infooo">
 							<div class="product-grid__image-wrapper">
 								<a href="<?= $block->escapeUrl( $block->getProductUrl( $_item ) ) ?>" class="product-item-photo">
 									<?= $this->helper( 'Olegnax\Core\Helper\ProductImage' )->getResizedImageHover( $_item, $image, $image_hover, [ $width, $height ], [ 'Olegnax_ProductSlider::product/hover_image_with_borders.phtml', 'Olegnax_ProductSlider::product/image_with_borders.phtml' ] )->toHtml() ?>

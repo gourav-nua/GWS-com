@@ -18,7 +18,7 @@ if( $toggleNavText ) {
 }
 $sticky_allowed = $block->getData("sticky_allowed");
 ?>
-<div class="page-header <?php echo $block->escapeHtmlAttr($header_classes) ?>"<?php if( $sticky_header && $sticky_allowed!= 'no' ) { echo ' data-role="OXsticky" data-mage-init=\'{"OXsticky":{}}\''; } ?>>
+<div class="page-header test <?php echo $block->escapeHtmlAttr($header_classes) ?>"<?php if( $sticky_header && $sticky_allowed!= 'no' ) { echo ' data-role="OXsticky" data-mage-init=\'{"OXsticky":{}}\''; } ?>>
 	<div class="sticky-wrapper">
 	<div class="container">
 		<div class="row">
@@ -39,7 +39,13 @@ $sticky_allowed = $block->getData("sticky_allowed");
 							</div>
 						<?php endif ?>
 					</div>
-					<div class="flex-right flex-row modal__right" data-move-mobile="header.main.right">								
+					<div class="flex-right flex-row modal__right" data-move-mobile="header.main.right">	
+						<?php
+						$language		 = $this->getChildHtml( 'store_language' );
+						$currency		 = $this->getChildHtml( 'currency' );
+						echo $language . $currency;
+						echo $block->getChildHtml("store_switcher");
+					?>							
 						<?php echo $this->getChildHtml( 'top.search' ) ?>
 						<?php
 							if($at_settings['header']['account_position'] == 'main') {

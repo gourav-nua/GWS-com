@@ -160,32 +160,31 @@ a.action.continue {
     font-size: 24px !important;
     padding: 10px 20px !important;
 }
-button.action.primary.checkout{
-	 span {
-	    font-size: 24px;
-	}
-}
-button.action.update{
-    padding: 10px 20px !important;
-}
-button.action.primary {
-    padding: 10px 20px !important;
-}
-button.action.primary.checkout{
-	span {
-	    font-size: 24px;
-	}	
+button {
+    &.action{
+        padding: 10px 20px !important;
+        &.primary {
+            &.checkout{
+                span {
+                   font-size: 24px;
+               }
+           }
+        }
+        &.update{
+            padding: 10px 20px !important;
+        }
+    }
+    &.giftcard-design-button{
+        font-family: @font-knockout;
+        span {
+            font-size: 16px;
+            font-weight: 600;
+            font-family: @font-open-Sans;
+        }
+    }
 }
 a.action.viewcart {
     padding: 10px 20px !important;
-}
-button.giftcard-design-button{
-    font-family: @font-knockout;
-	span {
-	    font-size: 16px;
-	    font-weight: 600;
-	    font-family: @font-open-Sans;
-	}
 }
 .ox-megamenu__dropdown.opened.animate {
     top: 100%;
@@ -220,7 +219,7 @@ button.button.action.continue.primary {
             padding: 25px 0;
         }
     }
-    .opc-sidebar {
+    .opc-sidebar { 
         margin-top: 0;
     }
     .page-header {

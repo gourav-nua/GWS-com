@@ -18,7 +18,7 @@ if( $toggleNavText ) {
 }
 $sticky_allowed = $block->getData("sticky_allowed");
 ?>
-<div class="page-header <?php echo $block->escapeHtmlAttr($header_classes) ?>"<?php if( $sticky_header && $sticky_allowed!= 'no' ) { echo ' data-role="OXsticky" data-mage-init=\'{"OXsticky":{}}\''; } ?>>
+<div class="page-header test <?php echo $block->escapeHtmlAttr($header_classes) ?>"<?php if( $sticky_header && $sticky_allowed!= 'no' ) { echo ' data-role="OXsticky" data-mage-init=\'{"OXsticky":{}}\''; } ?>>
 	<div class="sticky-wrapper">
 	<div class="container">
 		<div class="row">
@@ -34,18 +34,16 @@ $sticky_allowed = $block->getData("sticky_allowed");
 						<div data-action="toggle-mobile-nav" class="action slide-out-menu--mobile"><div class="hamburger-menu-icon-small" aria-label="<?= $block->escapeHtml(__('Menu')) ?>"><span></span><span></span><span></span></div><?= $toggleNavText ?></div>
 						<?php if ( $menu_position == 1 ) echo $this->getChildHtml( 'top.menu' ); ?>
 						<?php if ( $menu_position == 2 ) : ?>
-							<!-- <div class="header__additional-content"> -->
-								<?php //echo $block->getLayout()->createBlock( 'Magento\Cms\Block\Block' )->setBlockId( 'athlete2-header-text' )->toHtml(); ?>
-							<!-- </div> -->
+							<div class="header__additional-content">
+								<?php echo $block->getLayout()->createBlock( 'Magento\Cms\Block\Block' )->setBlockId( 'athlete2-header-text' )->toHtml(); ?>
+							</div>
 						<?php endif ?>
 					</div>
 					<div class="flex-right flex-row modal__right" data-move-mobile="header.main.right">	
-					<?php
-						$language		 = $this->getChildHtml( 'store_language' );
-						$currency		 = $this->getChildHtml( 'currency' );
-						echo $language . $currency;
-						echo $block->getChildHtml("store_switcher");
-					?>							
+						<?php
+						
+						//echo $language . $currency;
+						echo $block->getChildHtml("store_switcher");?>							
 						<?php echo $this->getChildHtml( 'top.search' ) ?>
 						<?php
 							if($at_settings['header']['account_position'] == 'main') {

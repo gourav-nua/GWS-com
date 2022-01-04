@@ -9,5 +9,6 @@
     <body>
         <referenceBlock name="customer.wishlist.item.options" remove="true"/>
         <referenceBlock name="customer.wishlist.item.comment" remove="true"/>
+        <referenceBlock name="customer.wishlist.button.share" remove="true"/>
     </body>
 </page>

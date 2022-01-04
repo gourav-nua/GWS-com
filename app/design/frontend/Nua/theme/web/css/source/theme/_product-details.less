@@ -75,7 +75,6 @@
             }
         }
     }
-
     .block-viewed-products-grid{
         .block-title{
             strong{
@@ -158,8 +157,31 @@
 	.product.attribute.overview {
 		font-family: @font-gotham-book;
 	}
+	.input-box {
+		.options-list {
+			li {
+				display: flex;
+				align-items: center;
+				input[type="checkbox"] {
+					margin-top: 0;
+					top: 0;
+				}
+			}  
+		}
+	}
 }
-
+.product-sale-label {
+    position: absolute;
+    background: @gold-color;
+    display: inline-block;
+    z-index: 9;
+    padding: 6px 10px;
+    color: @white-color; 
+    font-weight: 600;
+    left: 10px;
+    top: 10px;
+	line-height: 1.2;
+}
 .giftcard-information-container {
 	.giftcard-field-wrapper {
 		ul {
@@ -466,7 +488,7 @@ textarea {
 
 .mfp-auto-cursor {
 	.mfp-content {
-		.wp-confirmation-popup {
+		.wp-confirmation-popup { 
 			button.mfp-close {
 				&:hover {
 					color: @white-color;
@@ -487,6 +509,11 @@ textarea {
 			}
 			.action-buttons {
 				padding-bottom: 0;
+			}
+			.product-item-pricing {
+				.new-price {
+					color: @black-color;
+				}
 			}
 		}
 	}

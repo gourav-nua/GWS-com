@@ -1,0 +1,11 @@
+<?php
+	$_product = $block->getProduct();
+	$holidayGiftGuide = $_product->getResource()->getAttribute('holiday_gift_guide');
+	$attrValue = "";
+	if($_product->getIsWinterSale()){
+		$attrValue = $holidayGiftGuide->getFrontend()->getValue($_product);
+	}
+?>
+<?php if($attrValue): ?>
+	<span class="product-sale-label"><?= $attrValue; ?></span>
+<?php endif;?>

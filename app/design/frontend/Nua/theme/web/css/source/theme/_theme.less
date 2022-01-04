@@ -122,10 +122,30 @@ img {
             &:before {
                 background-color: @gold-color;
             }
-        }
+        } 
     }
+} 
+body {
+    select {
+        height: 55px; 
+    }  
+    .owl-theme {
+        .owl-controls {
+            .owl-nav {
+                [class*=owl-] {
+                    &.owl-next {
+                        &:after {
+                            height: auto;
+                        }
+                    }
+                    &.owl-prev {
+                        &:after {
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }  
 }
-
-select.select {
-    height: 55px; 
-}
+ 
